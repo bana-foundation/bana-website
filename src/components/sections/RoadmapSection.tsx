@@ -4,12 +4,24 @@ import { useRef } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
-const fadeUp = {
-  initial: { opacity: 0, y: 32 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-20%' },
-  transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
-};
+const introStagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+} as const;
+
+const introItem = {
+  hidden: { opacity: 0, y: 18, filter: 'blur(8px)' },
+  show: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: { duration: 0.82, ease: [0.16, 1, 0.3, 1] as const },
+  },
+} as const;
 
 export default function RoadmapSection() {
   const { t } = useTranslation();
@@ -37,16 +49,22 @@ export default function RoadmapSection() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl px-6">
-        <motion.div {...fadeUp} className="mb-20 text-center md:mb-28">
-          <div className="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.26em] text-[var(--bana-accent-blue)] shadow-[0_10px_24px_rgba(44,110,189,0.06)]">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: '-20%' }}
+          variants={introStagger}
+          className="mb-20 text-center md:mb-28"
+        >
+          <motion.div variants={introItem} className="inline-flex items-center rounded-full bg-blue-50 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.26em] text-[var(--bana-accent-blue)] shadow-[0_10px_24px_rgba(44,110,189,0.06)]">
             {t('roadmap.badge')}
-          </div>
-          <h3 className="mt-6 text-3xl font-semibold tracking-tighter text-gray-900 md:text-[3.5rem]">
+          </motion.div>
+          <motion.h3 variants={introItem} className="mt-6 text-3xl font-semibold tracking-tighter text-gray-900 md:text-[3.5rem]">
             {t('roadmap.title')}
-          </h3>
-          <p className="mt-4 text-lg font-medium text-gray-500 md:text-xl">
+          </motion.h3>
+          <motion.p variants={introItem} className="mt-4 text-lg font-medium text-gray-500 md:text-xl">
             {t('roadmap.description')}
-          </p>
+          </motion.p>
         </motion.div>
 
         <div ref={timelineRef} className="relative flex flex-col gap-20 md:gap-36">

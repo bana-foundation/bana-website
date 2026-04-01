@@ -20,7 +20,7 @@ export default function I18nProvider({
   const [i18n] = useState(() => {
     const instance = baseI18n.cloneInstance({
       lng: initialLanguage,
-      fallbackLng: 'ko',
+      fallbackLng: 'en',
       initImmediate: false,
     });
 

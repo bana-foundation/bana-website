@@ -11,6 +11,25 @@ const fadeUp = {
   transition: { duration: 0.85, ease: [0.16, 1, 0.3, 1] as const },
 };
 
+const introStagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+} as const;
+
+const introItem = {
+  hidden: { opacity: 0, y: 18, filter: 'blur(8px)' },
+  show: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: { duration: 0.82, ease: [0.16, 1, 0.3, 1] as const },
+  },
+} as const;
+
 const TECHNICAL_SECURITY = [
   {
     icon: ShieldCheck,
@@ -135,20 +154,26 @@ export default function SecuritySection() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
-        <motion.div {...fadeUp} className="mx-auto mb-18 max-w-5xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white/90 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--bana-accent-blue)] shadow-[0_12px_24px_rgba(27,84,177,0.06)]">
+        <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: '-15%' }}
+          variants={introStagger}
+          className="mx-auto mb-18 max-w-5xl text-center"
+        >
+          <motion.div variants={introItem} className="inline-flex items-center gap-2 rounded-full border border-blue-100 bg-white/90 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-[var(--bana-accent-blue)] shadow-[0_12px_24px_rgba(27,84,177,0.06)]">
             <ShieldEllipsis className="h-4 w-4" />
             {t('security.badge')}
-          </div>
-          <h2 className="mt-6 text-4xl font-semibold tracking-tight text-gray-900 md:text-[3.4rem]">
+          </motion.div>
+          <motion.h2 variants={introItem} className="mt-6 text-4xl font-semibold tracking-tight text-gray-900 md:text-[3.4rem]">
             {t('security.title')}
-          </h2>
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-gray-600 md:text-[19px]">
+          </motion.h2>
+          <motion.p variants={introItem} className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-gray-600 md:text-[19px]">
             {t('security.description1')}
-          </p>
-          <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-gray-500 md:text-lg">
+          </motion.p>
+          <motion.p variants={introItem} className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-gray-500 md:text-lg">
             {t('security.description2')}
-          </p>
+          </motion.p>
         </motion.div>
 
         <div className="mb-10 grid gap-6 lg:grid-cols-2">

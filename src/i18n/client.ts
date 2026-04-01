@@ -9,8 +9,9 @@ if (!i18n.isInitialized) {
     .use(initReactI18next)
     .init({
       resources,
-      lng: 'ko',
-      fallbackLng: 'ko',
+      lng: 'en',
+      fallbackLng: 'en',
+      supportedLngs: ['ko', 'en', 'zh', 'th', 'vi'],
       interpolation: {
         escapeValue: false,
       },

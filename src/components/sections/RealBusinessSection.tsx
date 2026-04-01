@@ -379,11 +379,24 @@ const PRINCIPLES = [
   },
 ] as const;
 
-const fadeUp = {
-  initial: { opacity: 0, y: 28 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: '-80px' },
-};
+const introStagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+} as const;
+
+const introItem = {
+  hidden: { opacity: 0, y: 18, filter: 'blur(8px)' },
+  show: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
+  },
+} as const;
 
 export default function RealBusinessSection() {
   const { t } = useTranslation();
@@ -468,25 +481,27 @@ export default function RealBusinessSection() {
       <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         {/* Heading */}
         <motion.div
-          {...fadeUp}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: '-80px' }}
+          variants={introStagger}
           className="mx-auto max-w-5xl text-center"
         >
-          <div className="inline-flex items-center rounded-full border border-white/70 bg-white/72 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#6b7280] shadow-[0_10px_30px_rgba(15,23,42,0.05)] backdrop-blur-xl">
+          <motion.div variants={introItem} className="inline-flex items-center rounded-full border border-white/70 bg-white/72 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-[#6b7280] shadow-[0_10px_30px_rgba(15,23,42,0.05)] backdrop-blur-xl">
             {t('realBusiness.badge')}
-          </div>
+          </motion.div>
 
-          <p className="mt-6 text-[12px] font-semibold uppercase tracking-[0.34em] text-[#7b8494]">
+          <motion.p variants={introItem} className="mt-6 text-[12px] font-semibold uppercase tracking-[0.34em] text-[#7b8494]">
             {t('realBusiness.eyebrow')}
-          </p>
+          </motion.p>
 
-          <h2 className="mt-5 text-balance text-4xl font-semibold tracking-[-0.05em] text-[#111827] sm:text-5xl lg:text-[4rem] lg:leading-[1.04]">
+          <motion.h2 variants={introItem} className="mt-5 text-balance text-4xl font-semibold tracking-[-0.05em] text-[#111827] sm:text-5xl lg:text-[4rem] lg:leading-[1.04]">
             {t('realBusiness.title')}
-          </h2>
+          </motion.h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-balance text-[17px] font-medium leading-relaxed text-[#6b7280] sm:text-[20px]">
+          <motion.p variants={introItem} className="mx-auto mt-6 max-w-3xl text-balance text-[17px] font-medium leading-relaxed text-[#6b7280] sm:text-[20px]">
             {t('realBusiness.description')}
-          </p>
+          </motion.p>
         </motion.div>
 
         {/* Main layout */}

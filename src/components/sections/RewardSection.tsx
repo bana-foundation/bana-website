@@ -43,6 +43,25 @@ const STRATEGIES = [
   },
 ] as const;
 
+const introStagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+} as const;
+
+const introItem = {
+  hidden: { opacity: 0, y: 18, filter: 'blur(8px)' },
+  show: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
+  },
+} as const;
+
 export default function RewardSection() {
   const { t } = useTranslation();
   const [animatedSupply, setAnimatedSupply] = useState(0);
@@ -125,23 +144,20 @@ export default function RewardSection() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          variants={introStagger}
           className="mx-auto max-w-5xl text-center"
         >
-          <div className="inline-flex items-center rounded-full bg-white/90 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.26em] text-[var(--bana-text-secondary)] shadow-[0_16px_34px_rgba(44,110,189,0.08)] backdrop-blur-xl">
+          <motion.div variants={introItem} className="inline-flex items-center rounded-full bg-white/90 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.26em] text-[var(--bana-text-secondary)] shadow-[0_16px_34px_rgba(44,110,189,0.08)] backdrop-blur-xl">
             {t('reward.badge')}
-          </div>
-          <p className="mt-6 text-sm font-semibold uppercase tracking-[0.34em] text-[var(--bana-text-secondary)]">
+          </motion.div>
+          <motion.p variants={introItem} className="mt-6 text-sm font-semibold uppercase tracking-[0.34em] text-[var(--bana-text-secondary)]">
             {t('reward.eyebrow')}
-          </p>
+          </motion.p>
           <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.08, duration: 0.7 }}
+            variants={introItem}
             className="mt-5 flex items-end justify-center gap-3 text-balance"
           >
             <span className="text-4xl font-semibold tracking-[-0.06em] text-[var(--bana-text-primary)] sm:text-5xl lg:text-[4.5rem]">
@@ -151,9 +167,9 @@ export default function RewardSection() {
               {t('reward.supplyLabel')}
             </span>
           </motion.p>
-          <p className="mx-auto mt-6 max-w-3xl text-balance text-lg font-medium leading-relaxed text-[var(--bana-text-secondary)] sm:text-xl">
+          <motion.p variants={introItem} className="mx-auto mt-6 max-w-3xl text-balance text-lg font-medium leading-relaxed text-[var(--bana-text-secondary)] sm:text-xl">
             {t('reward.description')}
-          </p>
+          </motion.p>
         </motion.div>
 
         <motion.div

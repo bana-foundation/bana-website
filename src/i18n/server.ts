@@ -6,5 +6,9 @@ export async function getRequestLanguage(): Promise<AppLanguage> {
   const cookieStore = await cookies();
   const value = cookieStore.get(LANGUAGE_COOKIE)?.value;
 
-  return value === 'en' ? 'en' : 'ko';
+  if (value === 'en' || value === 'zh' || value === 'th' || value === 'vi' || value === 'ko') {
+    return value;
+  }
+
+  return 'en';
 }

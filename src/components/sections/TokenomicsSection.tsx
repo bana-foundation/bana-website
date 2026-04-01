@@ -1,7 +1,8 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Coins, Gauge, Globe, Wallet } from 'lucide-react';
+import { Gauge, Globe, Wallet } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const INFRA_STRENGTHS = [
@@ -21,6 +22,25 @@ const INFRA_STRENGTHS = [
     tint: 'text-cyan-700',
   },
 ] as const;
+
+const introStagger = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.08,
+    },
+  },
+} as const;
+
+const introItem = {
+  hidden: { opacity: 0, y: 18, filter: 'blur(8px)' },
+  show: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] as const },
+  },
+} as const;
 
 export default function TokenomicsSection() {
   const { t } = useTranslation();
@@ -46,25 +66,25 @@ export default function TokenomicsSection() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial="hidden"
+          whileInView="show"
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          variants={introStagger}
           className="mx-auto max-w-5xl text-center"
         >
-          <div className="inline-flex items-center rounded-full bg-white/90 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.26em] text-[var(--bana-text-secondary)] shadow-[0_16px_34px_rgba(44,110,189,0.08)] backdrop-blur-xl">
+          <motion.div variants={introItem} className="inline-flex items-center rounded-full bg-white/90 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.26em] text-[var(--bana-text-secondary)] shadow-[0_16px_34px_rgba(44,110,189,0.08)] backdrop-blur-xl">
             {t('tokenomics.badge')}
-          </div>
-          <p className="mt-6 text-sm font-semibold uppercase tracking-[0.34em] text-[var(--bana-text-secondary)]">
+          </motion.div>
+          <motion.p variants={introItem} className="mt-6 text-sm font-semibold uppercase tracking-[0.34em] text-[var(--bana-text-secondary)]">
             {t('tokenomics.eyebrow')}
-          </p>
-          <h2 className="mt-5 text-balance text-4xl font-semibold tracking-[-0.06em] text-[var(--bana-text-primary)] sm:text-5xl lg:text-[4.4rem]">
+          </motion.p>
+          <motion.h2 variants={introItem} className="mt-5 text-balance text-4xl font-semibold tracking-[-0.06em] text-[var(--bana-text-primary)] sm:text-5xl lg:text-[4.4rem]">
             <span className="text-gradient-blue">{t('tokenomics.titleAccent')}</span> {t('tokenomics.titleSuffix')}
-          </h2>
-          <p className="mx-auto mt-6 max-w-5xl text-balance text-lg font-medium leading-relaxed text-[var(--bana-text-secondary)] sm:text-[1.65rem] sm:leading-[1.5]">
+          </motion.h2>
+          <motion.p variants={introItem} className="mx-auto mt-6 max-w-5xl text-balance text-lg font-medium leading-relaxed text-[var(--bana-text-secondary)] sm:text-[1.65rem] sm:leading-[1.5]">
             {t('tokenomics.descriptionPrefix')}
             <span className="text-gradient-blue font-semibold"> {t('tokenomics.descriptionAccent')}</span>{t('tokenomics.descriptionSuffix')}
-          </p>
+          </motion.p>
         </motion.div>
 
         <div className="mt-16 grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-center">
@@ -79,13 +99,13 @@ export default function TokenomicsSection() {
               <div className="absolute inset-0 rounded-full bg-[radial-gradient(circle,rgba(37,99,235,0.55)_0%,rgba(37,99,235,0.14)_38%,rgba(37,99,235,0)_68%)] blur-2xl" />
               <div className="relative flex h-[300px] w-[300px] items-center justify-center rounded-full bg-[#07111f] shadow-[0_32px_70px_rgba(37,99,235,0.24)] ring-[3px] ring-[#1d4ed8]">
                 <div className="flex flex-col items-center justify-center text-center">
-                  <div className="flex h-20 w-20 items-center justify-center rounded-[2rem] bg-white/8">
-                    <Coins className="h-10 w-10 text-[#60a5fa]" />
-                  </div>
-                  <p className="mt-6 text-[12px] font-semibold uppercase tracking-[0.28em] text-white/58">{t('tokenomics.logoSpace')}</p>
-                  <p className="mt-3 text-4xl font-semibold tracking-[-0.05em] text-white">
-                    BANA
-                  </p>
+                  <Image
+                    src="/logo.svg"
+                    alt="BANA logo"
+                    width={210}
+                    height={210}
+                    className="h-[210px] w-[210px] object-contain"
+                  />
                 </div>
               </div>
             </div>
