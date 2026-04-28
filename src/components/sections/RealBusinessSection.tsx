@@ -523,6 +523,7 @@ export default function RealBusinessSection() {
                     src={current.image}
                     alt={current.title}
                     fill
+                    unoptimized
                     sizes="(min-width: 1024px) 30vw, 100vw"
                     className="object-cover"
                   />
@@ -694,6 +695,7 @@ export default function RealBusinessSection() {
                         src={sector.thumb || sector.image}
                         alt={sector.title}
                         fill
+                        unoptimized
                         sizes="(min-width: 1024px) 10rem, 5rem"
                         className="object-cover"
                       />
