@@ -100,7 +100,7 @@ export default function Header() {
           className="flex items-center gap-3 focus:outline-none"
           aria-label="BANA PROTOCOL"
         >
-          <Image src="/logo_alt.png" alt="BANA logo" width={40} height={40} className="h-10 w-10 object-contain" />
+          <Image src="/logo_alt.png" alt="BANA logo" width={40} height={40} unoptimized className="h-10 w-10 object-contain" />
           <div className="text-left leading-none">
             <p className={`text-[1rem] font-semibold tracking-tight ${scrolled ? 'text-slate-900' : 'text-white'}`}>BANA</p>
             <p className={`mt-1 text-[11px] font-medium tracking-[0.08em] ${scrolled ? 'text-slate-500' : 'text-white/72'}`}>RWA &amp; Healthcare</p>
