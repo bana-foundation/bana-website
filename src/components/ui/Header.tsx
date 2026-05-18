@@ -4,12 +4,12 @@ import Image from 'next/image';
 import { useEffect, useMemo, useState } from 'react';
 import { Globe, Menu, X } from 'lucide-react';
 import { FaTelegramPlane } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaWallet, FaXTwitter } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
 
 const SOCIAL_LINKS = [
-  { href: 'https://x.com', label: 'X', icon: FaXTwitter },
-  { href: 'https://t.me', label: 'Telegram', icon: FaTelegramPlane },
+  { href: 'https://x.com/BanaProtocol', label: 'X', icon: FaXTwitter },
+  { href: 'https://t.me/BanaProtocol', label: 'Telegram', icon: FaTelegramPlane },
 ] as const;
 
 const LANGUAGE_OPTIONS = [
@@ -172,6 +172,15 @@ export default function Header() {
           </div>
 
           <div className="flex items-center gap-2">
+            <a
+              href="https://banaos.io/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="BANA Wallet"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-violet-500 to-blue-500 text-white shadow-[0_4px_14px_rgba(139,92,246,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(139,92,246,0.5)]"
+            >
+              <FaWallet className="h-4 w-4" />
+            </a>
             {SOCIAL_LINKS.map((item) => (
               <a
                 key={item.label}
@@ -276,6 +285,15 @@ export default function Header() {
             </nav>
 
             <div className="mt-5 flex items-center gap-2">
+              <a
+                href="https://banaos.io/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="BANA Wallet"
+                className="flex h-11 flex-1 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-500 to-blue-500 text-white shadow-[0_4px_14px_rgba(139,92,246,0.4)] transition-all duration-300 hover:shadow-[0_6px_20px_rgba(139,92,246,0.5)]"
+              >
+                <FaWallet className="h-4 w-4" />
+              </a>
               {SOCIAL_LINKS.map((item) => (
                 <a
                   key={item.label}

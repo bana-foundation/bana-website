@@ -19,5 +19,8 @@
   ],
   "images": {
     "binding": "IMAGES"
+  },
+  "vars": {
+    "NEXT_PUBLIC_GA_MEASUREMENT_ID": "G-L0VGJE8BE4"
   }
 }

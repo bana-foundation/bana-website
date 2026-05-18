@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import I18nProvider from "@/components/providers/I18nProvider";
 import { getRequestLanguage } from "@/i18n/server";
 import { getMetadataBase, getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
 const siteUrl = getSiteUrl();
 const metadataBase = getMetadataBase();
@@ -23,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     metadataBase,
-    title: "BANA Protocol — RWA & Web3 Financial OS",
+    title: "BANA Protocol",
     description,
     keywords: ["RWA", "Web3", "DeFi", "blockchain", "tokenization", "medical", "BANA"],
     alternates: {
@@ -33,7 +36,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       url: "/",
       siteName: "BANA Protocol",
-      title: "BANA Protocol — RWA & Web3 Financial OS",
+      title: "BANA Protocol",
       description,
       locale:
         language === "ko"
@@ -56,7 +59,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: "BANA Protocol — RWA & Web3 Financial OS",
+      title: "BANA Protocol",
       description,
       images: [ogImage],
     },
@@ -105,6 +108,22 @@ export default async function RootLayout({
   return (
     <html lang={language} className="antialiased" suppressHydrationWarning>
       <body>
+        {GA_ID && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+              strategy="afterInteractive"
+            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${GA_ID}');
+              `}
+            </Script>
+          </>
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
