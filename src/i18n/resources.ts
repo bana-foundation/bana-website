@@ -580,6 +580,11 @@ const baseResources = {
             tagline: 'BNB 체인 AI 기반 DEX 애그리게이터',
             description: 'Llama 4 기반 AI Copilot이 다수의 DEX와 유동성 풀을 실시간 분석해 1초 내에 최적의 스왑 경로를 찾습니다.',
           },
+          {
+            name: 'WINGS',
+            tagline: 'AI 기반 차세대 여행 생태계',
+            description: '스마트 모빌리티, 원활한 사용자 경험, 확장 가능한 Web3 통합을 중심으로 한 차세대 AI 여행 플랫폼입니다.',
+          },
         ],
       },
       footer: {
@@ -1148,6 +1153,11 @@ const baseResources = {
             tagline: 'AI-Powered DEX Aggregator on BNB',
             description: 'A next-generation AI-powered DEX aggregator on BNB Chain. Powered by Llama 4, finds the optimal and safest path for every trade in under a second.',
           },
+          {
+            name: 'WINGS',
+            tagline: 'AI-Powered Travel Ecosystem',
+            description: 'A next-generation AI-powered travel ecosystem focused on smarter mobility, seamless user experiences, and scalable Web3 integration.',
+          },
         ],
       },
       footer: {
@@ -1684,6 +1694,11 @@ const zhTranslation = {
         tagline: 'BNB链AI驱动DEX聚合器',
         description: '基于Llama 4的AI Copilot实时扫描多个DEX与流动性池，在一秒内找到最优交易路径。',
       },
+      {
+        name: 'WINGS',
+        tagline: 'AI驱动的下一代旅行生态系统',
+        description: '专注于智能出行、无缝用户体验与可扩展Web3集成的下一代AI旅行平台。',
+      },
     ],
   },
   footer: {
@@ -2216,6 +2231,11 @@ const thTranslation = {
         tagline: 'DEX Aggregator AI บน BNB Chain',
         description: 'AI Copilot จาก Llama 4 สแกน DEX และ liquidity pool หลายแห่ง เพื่อหาเส้นทาง swap ที่ดีที่สุดภายในหนึ่งวินาที',
       },
+      {
+        name: 'WINGS',
+        tagline: 'ระบบนิเวศการท่องเที่ยว AI รุ่นใหม่',
+        description: 'แพลตฟอร์มการท่องเที่ยว AI รุ่นใหม่ที่มุ่งเน้นการเดินทางอัจฉริยะ ประสบการณ์ผู้ใช้ที่ราบรื่น และการผสาน Web3 ที่ขยายได้',
+      },
     ],
   },
   footer: {
@@ -2540,6 +2560,11 @@ const viTranslation = {
         name: 'Athena Protocol',
         tagline: 'DEX Aggregator AI trên BNB Chain',
         description: 'AI Copilot dựa trên Llama 4 quét nhiều DEX và pool thanh khoản để tìm đường swap tối ưu và an toàn nhất trong vòng một giây.',
+      },
+      {
+        name: 'WINGS',
+        tagline: 'Hệ sinh thái du lịch AI thế hệ mới',
+        description: 'Nền tảng du lịch AI thế hệ mới tập trung vào di chuyển thông minh, trải nghiệm người dùng liền mạch và tích hợp Web3 có khả năng mở rộng.',
       },
     ],
   },

@@ -10,6 +10,7 @@ const PARTNER_LOGOS: Record<string, string> = {
   'AEGIS X': '/images/aegisx.jpeg',
   Ai6: '/images/ai6.jpeg',
   'Athena Protocol': '/images/athenaai.jpeg',
+  WINGS: '/images/wings.jpeg',
 };
 
 const fadeUp = {
@@ -74,7 +75,7 @@ export default function EcosystemSection() {
         </motion.div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {partners.map((partner, i) => (
             <motion.div
               key={partner.name}
