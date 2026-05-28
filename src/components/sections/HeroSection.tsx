@@ -2,13 +2,19 @@
 
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
+import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
+
+const partners = [
+  { name: 'BD Ventures', logo: '/images/bd_ventures.jpeg' },
+  { name: 'M2M Capital', logo: '/images/m2m_capital.jpeg' },
+];
 
 export default function HeroSection() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#05225c] pt-28 pb-16 text-white">
+    <section className="relative flex min-h-screen flex-col overflow-hidden bg-[#05225c] pt-28 text-white">
       <div
         className="absolute inset-0"
         style={{
@@ -48,7 +54,7 @@ export default function HeroSection() {
         <div className="absolute inset-x-[10%] top-[8%] h-[22rem] rounded-[3rem] bg-[linear-gradient(180deg,rgba(255,255,255,0.08),rgba(255,255,255,0))] opacity-80 blur-2xl" />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-7rem)] max-w-7xl items-center px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto flex flex-1 max-w-7xl items-center px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
           animate="show"
@@ -140,8 +146,41 @@ export default function HeroSection() {
               {t('hero.ctaSecondary')}
             </a>
           </motion.div>
+
         </motion.div>
       </div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        className="relative z-10 border-t border-white/10 bg-white/5 backdrop-blur-sm"
+      >
+        <div className="mx-auto flex max-w-7xl flex-col items-center gap-2.5 py-3 px-4 sm:px-6 lg:px-8">
+          <span className="text-[13px] font-semibold uppercase tracking-[0.25em] text-white/35">
+            VC
+          </span>
+          <div className="flex items-center gap-5 sm:gap-10">
+            {partners.map((partner, i) => (
+              <div key={partner.name} className="flex items-center gap-5 sm:gap-10">
+                <div className="flex items-center gap-2.5 sm:gap-4">
+                  <div className="h-9 w-9 overflow-hidden rounded-full ring-2 ring-white/20 sm:h-14 sm:w-14">
+                    <Image
+                      src={partner.logo}
+                      alt={partner.name}
+                      width={56}
+                      height={56}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <span className="whitespace-nowrap text-sm font-medium text-white/70 sm:text-base">{partner.name}</span>
+                </div>
+                {i < partners.length - 1 && <div className="h-5 w-px bg-white/20" />}
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

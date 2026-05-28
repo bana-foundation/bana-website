@@ -11,6 +11,7 @@ const baseResources = {
           { id: 'reward', label: '배분 및 락업' },
           { id: 'roadmap', label: '로드맵' },
           { id: 'security', label: '보안 및 감사' },
+          { id: 'ecosystem', label: '파트너' },
         ],
       },
       hero: {
@@ -554,6 +555,33 @@ const baseResources = {
         },
         closing: 'BANA는 당신의 자산을 지키기 위해 기술적, 법률적, 운영적 모든 측면에서 최상의 방어 체계를 갖추고 있습니다.',
       },
+      ecosystem: {
+        badge: '파트너',
+        titlePrefix: '신뢰로 연결된',
+        titleAccent: '파트너 네트워크',
+        partners: [
+          {
+            name: 'OrionX',
+            tagline: 'AI 밸류에이션 & OTC 트레이딩',
+            description: 'AI 밸류에이션, 경매 신호, OTC 트레이딩을 하나의 대시보드에서 제공합니다.',
+          },
+          {
+            name: 'AEGIS X',
+            tagline: 'Web3를 위한 실시간 AI 보안',
+            description: 'Web3에 실제로 필요한 AI 보안 레이어. 실시간 위협 감지, 악성 컨트랙트 차단, 연결 전 온체인 안전성 검증.',
+          },
+          {
+            name: 'Ai6',
+            tagline: '탈중앙화 AI 데이터 인텔리전스',
+            description: '인간의 기여를 검증 가능한 인텔리전스로 전환합니다. 실제 데이터 작업 완료, 컨센서스 검증, 온체인 보상 획득.',
+          },
+          {
+            name: 'Athena Protocol',
+            tagline: 'BNB 체인 AI 기반 DEX 애그리게이터',
+            description: 'Llama 4 기반 AI Copilot이 다수의 DEX와 유동성 풀을 실시간 분석해 1초 내에 최적의 스왑 경로를 찾습니다.',
+          },
+        ],
+      },
       footer: {
         copyright: 'Copyright © 2026 BANA Protocol. All rights reserved.',
       },
@@ -571,6 +599,7 @@ const baseResources = {
           { id: 'reward', label: 'Allocation' },
           { id: 'roadmap', label: 'Roadmap' },
           { id: 'security', label: 'Security' },
+          { id: 'ecosystem', label: 'Partners' },
         ],
       },
       hero: {
@@ -1094,6 +1123,33 @@ const baseResources = {
         },
         closing: 'BANA is building a best-in-class defensive framework across technical, legal, and operational dimensions to protect your assets.',
       },
+      ecosystem: {
+        badge: 'Partners',
+        titlePrefix: 'Powered by',
+        titleAccent: 'Trusted Partnerships',
+        partners: [
+          {
+            name: 'OrionX',
+            tagline: 'AI Valuations & OTC Trading',
+            description: 'AI valuations, auction signals, and OTC trading, all in one dashboard.',
+          },
+          {
+            name: 'AEGIS X',
+            tagline: 'Real-Time AI Security for Web3',
+            description: 'An AI security layer Web3 actually needs. Detects threats in real-time, blocks malicious contracts, and verifies your safety on-chain before connection.',
+          },
+          {
+            name: 'Ai6',
+            tagline: 'Decentralized AI Data Intelligence',
+            description: 'Transforms human contribution into verifiable intelligence. Complete real data tasks, validate consensus, and earn on-chain rewards.',
+          },
+          {
+            name: 'Athena Protocol',
+            tagline: 'AI-Powered DEX Aggregator on BNB',
+            description: 'A next-generation AI-powered DEX aggregator on BNB Chain. Powered by Llama 4, finds the optimal and safest path for every trade in under a second.',
+          },
+        ],
+      },
       footer: {
         copyright: 'Copyright © 2026 BANA Protocol. All rights reserved.',
       },
@@ -1113,6 +1169,7 @@ const zhTranslation = {
       { id: 'reward', label: '分配与锁仓' },
       { id: 'roadmap', label: '路线图' },
       { id: 'security', label: '安全与审计' },
+      { id: 'ecosystem', label: '合作伙伴' },
     ],
   },
   hero: {
@@ -1602,6 +1659,33 @@ const zhTranslation = {
     ],
     closing: 'BANA 正在从技术、法律与运营三个维度构建最佳防护体系，守护您的资产。',
   },
+  ecosystem: {
+    badge: '合作伙伴',
+    titlePrefix: '以信任相连的',
+    titleAccent: '合作伙伴网络',
+    partners: [
+      {
+        name: 'OrionX',
+        tagline: 'AI估值与OTC交易',
+        description: '将AI估值、拍卖信号与OTC交易整合于一个仪表盘。',
+      },
+      {
+        name: 'AEGIS X',
+        tagline: 'Web3实时AI安全层',
+        description: 'Web3真正需要的AI安全层。实时检测威胁，拦截恶意合约，连接前完成链上安全验证。',
+      },
+      {
+        name: 'Ai6',
+        tagline: '去中心化AI数据智能',
+        description: '将人类贡献转化为可验证的智能。完成真实数据任务，验证共识，获取链上奖励。',
+      },
+      {
+        name: 'Athena Protocol',
+        tagline: 'BNB链AI驱动DEX聚合器',
+        description: '基于Llama 4的AI Copilot实时扫描多个DEX与流动性池，在一秒内找到最优交易路径。',
+      },
+    ],
+  },
   footer: {
     copyright: 'Copyright © 2026 BANA Protocol. 保留所有权利。',
   },
@@ -1617,6 +1701,7 @@ const thTranslation = {
       { id: 'reward', label: 'การจัดสรรและล็อกอัป' },
       { id: 'roadmap', label: 'โรดแมป' },
       { id: 'security', label: 'ความปลอดภัยและการตรวจสอบ' },
+      { id: 'ecosystem', label: 'พาร์ทเนอร์' },
     ],
   },
   hero: {
@@ -2106,6 +2191,33 @@ const thTranslation = {
     },
     closing: 'BANA กำลังสร้างกรอบป้องกันระดับสูงในมิติเทคนิค กฎหมาย และการดำเนินงาน เพื่อปกป้องทรัพย์สินของคุณ',
   },
+  ecosystem: {
+    badge: 'พาร์ทเนอร์',
+    titlePrefix: 'เครือข่ายพาร์ทเนอร์',
+    titleAccent: 'ที่เชื่อมด้วยความไว้วางใจ',
+    partners: [
+      {
+        name: 'OrionX',
+        tagline: 'AI Valuations & OTC Trading',
+        description: 'รวม AI valuations, auction signals และ OTC trading ไว้ในแดชบอร์ดเดียว',
+      },
+      {
+        name: 'AEGIS X',
+        tagline: 'ความปลอดภัย AI แบบเรียลไทม์สำหรับ Web3',
+        description: 'เลเยอร์ความปลอดภัย AI ที่ Web3 ต้องการ ตรวจจับภัยคุกคาม บล็อกสัญญาอันตราย และยืนยันความปลอดภัยบนเชนก่อนเชื่อมต่อ',
+      },
+      {
+        name: 'Ai6',
+        tagline: 'AI Data Intelligence แบบกระจายศูนย์',
+        description: 'แปลงการมีส่วนร่วมของมนุษย์เป็น intelligence ที่ตรวจสอบได้ ทำงานข้อมูลจริง ตรวจสอบ consensus และรับรางวัลบนเชน',
+      },
+      {
+        name: 'Athena Protocol',
+        tagline: 'DEX Aggregator AI บน BNB Chain',
+        description: 'AI Copilot จาก Llama 4 สแกน DEX และ liquidity pool หลายแห่ง เพื่อหาเส้นทาง swap ที่ดีที่สุดภายในหนึ่งวินาที',
+      },
+    ],
+  },
   footer: {
     copyright: 'Copyright © 2026 BANA Protocol. สงวนลิขสิทธิ์',
   },
@@ -2121,6 +2233,7 @@ const viTranslation = {
       { id: 'reward', label: 'Phân bổ & khóa' },
       { id: 'roadmap', label: 'Lộ trình' },
       { id: 'security', label: 'Bảo mật & kiểm toán' },
+      { id: 'ecosystem', label: 'Đối tác' },
     ],
   },
   hero: {
@@ -2402,6 +2515,33 @@ const viTranslation = {
       ],
     },
     closing: 'BANA đang xây dựng khung phòng thủ tốt nhất trên cả phương diện kỹ thuật, pháp lý và vận hành để bảo vệ tài sản của bạn.',
+  },
+  ecosystem: {
+    badge: 'Đối tác',
+    titlePrefix: 'Mạng lưới đối tác',
+    titleAccent: 'kết nối bằng niềm tin',
+    partners: [
+      {
+        name: 'OrionX',
+        tagline: 'Định giá AI & Giao dịch OTC',
+        description: 'Định giá AI, tín hiệu đấu giá và giao dịch OTC, tất cả trong một dashboard.',
+      },
+      {
+        name: 'AEGIS X',
+        tagline: 'Bảo mật AI thời gian thực cho Web3',
+        description: 'Lớp bảo mật AI mà Web3 thực sự cần. Phát hiện mối đe dọa thời gian thực, chặn hợp đồng độc hại và xác minh an toàn on-chain trước khi kết nối.',
+      },
+      {
+        name: 'Ai6',
+        tagline: 'Trí tuệ dữ liệu AI phi tập trung',
+        description: 'Chuyển đổi đóng góp của con người thành trí tuệ có thể xác minh. Hoàn thành tác vụ dữ liệu thực, xác nhận đồng thuận và nhận phần thưởng on-chain.',
+      },
+      {
+        name: 'Athena Protocol',
+        tagline: 'DEX Aggregator AI trên BNB Chain',
+        description: 'AI Copilot dựa trên Llama 4 quét nhiều DEX và pool thanh khoản để tìm đường swap tối ưu và an toàn nhất trong vòng một giây.',
+      },
+    ],
   },
   footer: {
     copyright: 'Copyright © 2026 BANA Protocol. Đã đăng ký mọi quyền.',

@@ -5,6 +5,7 @@ import TokenomicsSection from '@/components/sections/TokenomicsSection';
 import RewardSection from '@/components/sections/RewardSection';
 import RoadmapSection from '@/components/sections/RoadmapSection';
 import SecuritySection from '@/components/sections/SecuritySection';
+import EcosystemSection from '@/components/sections/EcosystemSection';
 import Header from '@/components/ui/Header';
 import Footer from '@/components/ui/Footer';
 
@@ -20,6 +21,7 @@ export default function Home() {
         <RewardSection />
         <RoadmapSection />
         <SecuritySection />
+        <EcosystemSection />
       </main>
       <Footer />
     </>

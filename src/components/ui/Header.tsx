@@ -45,6 +45,12 @@ export default function Header() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 24);
 
+      const nearBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 80;
+      if (nearBottom && sections.length > 0) {
+        setActiveSection(sections[sections.length - 1].id);
+        return;
+      }
+
       let current = '';
       sections.forEach((section) => {
         const el = document.getElementById(section.id);
