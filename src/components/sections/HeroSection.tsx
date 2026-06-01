@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 
 const partners = [
@@ -145,6 +146,13 @@ export default function HeroSection() {
             >
               {t('hero.ctaSecondary')}
             </a>
+            <Link
+              href="/attest"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-violet-400/40 bg-violet-500/15 px-6 py-3 text-[15px] font-semibold text-violet-200 backdrop-blur-xl transition-all duration-300 hover:-translate-y-px hover:bg-violet-500/25"
+            >
+              <span className="h-1.5 w-1.5 rounded-full bg-violet-400 animate-pulse" />
+              Health Proof
+            </Link>
           </motion.div>
 
         </motion.div>

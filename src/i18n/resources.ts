@@ -585,6 +585,11 @@ const baseResources = {
             tagline: 'AI 기반 차세대 여행 생태계',
             description: '스마트 모빌리티, 원활한 사용자 경험, 확장 가능한 Web3 통합을 중심으로 한 차세대 AI 여행 플랫폼입니다.',
           },
+          {
+            name: 'OMOI',
+            tagline: 'AI 기반 차세대 커뮤니케이션',
+            description: 'OMOI는 AI 기반 커뮤니케이션의 차세대 플랫폼을 구축하고 있습니다.',
+          },
         ],
       },
       footer: {
@@ -1158,6 +1163,11 @@ const baseResources = {
             tagline: 'AI-Powered Travel Ecosystem',
             description: 'A next-generation AI-powered travel ecosystem focused on smarter mobility, seamless user experiences, and scalable Web3 integration.',
           },
+          {
+            name: 'OMOI',
+            tagline: 'Next-Gen AI Communication',
+            description: 'OMOI is building the next generation of AI-powered communication.',
+          },
         ],
       },
       footer: {
@@ -1699,6 +1709,11 @@ const zhTranslation = {
         tagline: 'AI驱动的下一代旅行生态系统',
         description: '专注于智能出行、无缝用户体验与可扩展Web3集成的下一代AI旅行平台。',
       },
+      {
+        name: 'OMOI',
+        tagline: '下一代AI通信平台',
+        description: 'OMOI正在构建下一代AI驱动的通信平台。',
+      },
     ],
   },
   footer: {
@@ -2236,6 +2251,11 @@ const thTranslation = {
         tagline: 'ระบบนิเวศการท่องเที่ยว AI รุ่นใหม่',
         description: 'แพลตฟอร์มการท่องเที่ยว AI รุ่นใหม่ที่มุ่งเน้นการเดินทางอัจฉริยะ ประสบการณ์ผู้ใช้ที่ราบรื่น และการผสาน Web3 ที่ขยายได้',
       },
+      {
+        name: 'OMOI',
+        tagline: 'การสื่อสาร AI รุ่นใหม่',
+        description: 'OMOI กำลังสร้างแพลตฟอร์มการสื่อสารที่ขับเคลื่อนด้วย AI รุ่นใหม่',
+      },
     ],
   },
   footer: {
@@ -2565,6 +2585,11 @@ const viTranslation = {
         name: 'WINGS',
         tagline: 'Hệ sinh thái du lịch AI thế hệ mới',
         description: 'Nền tảng du lịch AI thế hệ mới tập trung vào di chuyển thông minh, trải nghiệm người dùng liền mạch và tích hợp Web3 có khả năng mở rộng.',
+      },
+      {
+        name: 'OMOI',
+        tagline: 'Giao tiếp AI thế hệ mới',
+        description: 'OMOI đang xây dựng nền tảng giao tiếp thế hệ tiếp theo được hỗ trợ bởi AI.',
       },
     ],
   },

@@ -1,8 +1,9 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
-import { Globe, Menu, X } from 'lucide-react';
+import { Globe, HeartPulse, Menu, X } from 'lucide-react';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { FaWallet, FaXTwitter } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
@@ -178,6 +179,13 @@ export default function Header() {
           </div>
 
           <div className="flex items-center gap-2">
+            <Link
+              href="/attest"
+              aria-label="Health Proof"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-emerald-400 to-teal-500 text-white shadow-[0_4px_14px_rgba(16,185,129,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(16,185,129,0.5)]"
+            >
+              <HeartPulse className="h-4 w-4" />
+            </Link>
             <a
               href="https://banaos.io/"
               target="_blank"
@@ -291,6 +299,15 @@ export default function Header() {
             </nav>
 
             <div className="mt-5 flex items-center gap-2">
+              <Link
+                href="/attest"
+                onClick={() => setMenuOpen(false)}
+                aria-label="Health Proof"
+                className="flex h-11 flex-1 items-center justify-center gap-2 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-500 text-white text-[13px] font-semibold shadow-[0_4px_14px_rgba(16,185,129,0.4)] transition-all duration-300 hover:shadow-[0_6px_20px_rgba(16,185,129,0.5)]"
+              >
+                <HeartPulse className="h-4 w-4" />
+                Health Proof
+              </Link>
               <a
                 href="https://banaos.io/"
                 target="_blank"

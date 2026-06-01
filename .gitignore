@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# wallet data (contains private keys - never commit)
+bsc_wallets.json

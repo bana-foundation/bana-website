@@ -11,6 +11,7 @@ const PARTNER_LOGOS: Record<string, string> = {
   Ai6: '/images/ai6.jpeg',
   'Athena Protocol': '/images/athenaai.jpeg',
   WINGS: '/images/wings.jpeg',
+  OMOI: '/images/omoi.jpeg',
 };
 
 const fadeUp = {
