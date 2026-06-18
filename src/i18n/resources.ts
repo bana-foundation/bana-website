@@ -590,6 +590,36 @@ const baseResources = {
             tagline: 'AI 기반 차세대 커뮤니케이션',
             description: 'OMOI는 AI 기반 커뮤니케이션의 차세대 플랫폼을 구축하고 있습니다.',
           },
+          {
+            name: 'IQ',
+            tagline: 'AI & DeFi 기술 플랫폼',
+            description: 'IQ와 RWA가 결합된 AI 및 DeFi 기술 기반으로, 원화 스테이블코인 KrwqCash와 협력합니다.',
+          },
+          {
+            name: 'UXLINK',
+            tagline: 'Web3 소셜 성장 레이어',
+            description: '탈중앙화 소셜 네트워크를 통해 사용자와 빌더가 가치를 창출, 성장, 포착할 수 있도록 지원하는 Web3 소셜 성장 레이어입니다.',
+          },
+          {
+            name: 'XAgent',
+            tagline: 'AI 에이전트 생성 플랫폼',
+            description: '자연어를 통해 누구나 커스텀 AI 에이전트를 생성할 수 있으며, Web3 소셜 연결과 자율 AI 실행을 안전한 환경에서 연결합니다.',
+          },
+          {
+            name: 'Okratech Token(ORT)',
+            tagline: 'AI 기반 Web3 생태계',
+            description: 'BANA 프로토콜의 혁신적인 RWA 인프라를 갖춘 AI 기반 Web3 생태계로, 유틸리티, 성장, 실세계 블록체인 도입의 새로운 기회를 창출합니다.',
+          },
+          {
+            name: 'Arcade Galaxy',
+            tagline: 'GameFi & Web3 엔터테인먼트',
+            description: 'GameFi의 미래, 디지털 소유권, 몰입형 Web3 엔터테인먼트의 확장을 목표로 합니다.',
+          },
+          {
+            name: 'AstroX Finance',
+            tagline: 'Web3 생태계 성장 파트너',
+            description: 'AstroX Finance와 BANA 프로토콜은 생태계 성장을 주도하고, 커뮤니티 도달 범위를 확장하며, Web3 도입을 가속화합니다.',
+          },
         ],
       },
       footer: {
@@ -1168,6 +1198,36 @@ const baseResources = {
             tagline: 'Next-Gen AI Communication',
             description: 'OMOI is building the next generation of AI-powered communication.',
           },
+          {
+            name: 'IQ',
+            tagline: 'AI & DeFi Technology Platform',
+            description: 'AI and DeFi technology powered by IQ and RWA, collaborating with Korean won stablecoin KrwqCash.',
+          },
+          {
+            name: 'UXLINK',
+            tagline: 'Social Growth Layer of Web3',
+            description: 'Empowering users and builders to create, grow, and capture value through decentralized social networks.',
+          },
+          {
+            name: 'XAgent',
+            tagline: 'Custom AI Agent Creation Platform',
+            description: 'Enables anyone to create custom AI Agents through natural language, bridging Web3 social connections with autonomous AI execution in a secure environment.',
+          },
+          {
+            name: 'Okratech Token(ORT)',
+            tagline: 'AI-Powered Web3 Ecosystem',
+            description: "AI-powered Web3 ecosystem with BANA Protocol's innovative RWA infrastructure, creating new opportunities for utility, growth, and real-world blockchain adoption.",
+          },
+          {
+            name: 'Arcade Galaxy',
+            tagline: 'GameFi & Web3 Entertainment',
+            description: 'Aim to expand the future of GameFi, digital ownership, and immersive Web3 entertainment.',
+          },
+          {
+            name: 'AstroX Finance',
+            tagline: 'Web3 Ecosystem Growth Partner',
+            description: 'AstroX Finance and BANA Protocol will drive ecosystem growth, expand community reach, and accelerate Web3 adoption.',
+          },
         ],
       },
       footer: {
@@ -1714,6 +1774,36 @@ const zhTranslation = {
         tagline: '下一代AI通信平台',
         description: 'OMOI正在构建下一代AI驱动的通信平台。',
       },
+      {
+        name: 'IQ',
+        tagline: 'AI与DeFi技术平台',
+        description: '由IQ与RWA驱动的AI及DeFi技术平台，与韩元稳定币KrwqCash合作。',
+      },
+      {
+        name: 'UXLINK',
+        tagline: 'Web3社交增长层',
+        description: '通过去中心化社交网络，赋能用户和建设者创造、成长并获取价值。',
+      },
+      {
+        name: 'XAgent',
+        tagline: 'AI代理创建平台',
+        description: '让任何人都能通过自然语言创建自定义AI代理，在安全环境中将Web3社交连接与自主AI执行相结合。',
+      },
+      {
+        name: 'Okratech Token(ORT)',
+        tagline: 'AI驱动的Web3生态系统',
+        description: '结合BANA协议创新RWA基础设施的AI驱动Web3生态系统，为实用性、增长和现实世界区块链采用创造新机遇。',
+      },
+      {
+        name: 'Arcade Galaxy',
+        tagline: 'GameFi与Web3娱乐',
+        description: '致力于拓展GameFi的未来、数字所有权和沉浸式Web3娱乐。',
+      },
+      {
+        name: 'AstroX Finance',
+        tagline: 'Web3生态系统增长伙伴',
+        description: 'AstroX Finance与BANA协议将共同推动生态系统增长，扩大社区覆盖范围，加速Web3采用。',
+      },
     ],
   },
   footer: {
@@ -2256,6 +2346,36 @@ const thTranslation = {
         tagline: 'การสื่อสาร AI รุ่นใหม่',
         description: 'OMOI กำลังสร้างแพลตฟอร์มการสื่อสารที่ขับเคลื่อนด้วย AI รุ่นใหม่',
       },
+      {
+        name: 'IQ',
+        tagline: 'แพลตฟอร์ม AI & DeFi',
+        description: 'เทคโนโลยี AI และ DeFi ที่ขับเคลื่อนโดย IQ และ RWA ร่วมมือกับ stablecoin สกุลเงินวอนเกาหลี KrwqCash',
+      },
+      {
+        name: 'UXLINK',
+        tagline: 'Social Growth Layer ของ Web3',
+        description: 'เสริมพลังผู้ใช้และผู้พัฒนาในการสร้าง เติบโต และสร้างคุณค่าผ่านเครือข่ายสังคมแบบกระจายศูนย์',
+      },
+      {
+        name: 'XAgent',
+        tagline: 'แพลตฟอร์มสร้าง AI Agent',
+        description: 'ให้ทุกคนสามารถสร้าง AI Agent แบบกำหนดเองผ่านภาษาธรรมชาติ เชื่อมโยงการเชื่อมต่อสังคม Web3 กับการดำเนินการ AI อัตโนมัติในสภาพแวดล้อมที่ปลอดภัย',
+      },
+      {
+        name: 'Okratech Token(ORT)',
+        tagline: 'ระบบนิเวศ Web3 ขับเคลื่อนด้วย AI',
+        description: 'ระบบนิเวศ Web3 ที่ขับเคลื่อนด้วย AI พร้อมโครงสร้างพื้นฐาน RWA ที่สร้างสรรค์ของ BANA Protocol สร้างโอกาสใหม่สำหรับยูทิลิตี้ การเติบโต และการนำบล็อกเชนไปใช้ในโลกจริง',
+      },
+      {
+        name: 'Arcade Galaxy',
+        tagline: 'GameFi & Web3 Entertainment',
+        description: 'มุ่งขยายอนาคตของ GameFi ความเป็นเจ้าของดิจิทัล และความบันเทิง Web3 แบบดื่มด่ำ',
+      },
+      {
+        name: 'AstroX Finance',
+        tagline: 'พาร์ทเนอร์การเติบโตระบบนิเวศ Web3',
+        description: 'AstroX Finance และ BANA Protocol จะขับเคลื่อนการเติบโตของระบบนิเวศ ขยายการเข้าถึงชุมชน และเร่งการนำ Web3 มาใช้',
+      },
     ],
   },
   footer: {
@@ -2590,6 +2710,36 @@ const viTranslation = {
         name: 'OMOI',
         tagline: 'Giao tiếp AI thế hệ mới',
         description: 'OMOI đang xây dựng nền tảng giao tiếp thế hệ tiếp theo được hỗ trợ bởi AI.',
+      },
+      {
+        name: 'IQ',
+        tagline: 'Nền tảng AI & DeFi',
+        description: 'Công nghệ AI và DeFi được hỗ trợ bởi IQ và RWA, hợp tác với stablecoin đồng won Hàn Quốc KrwqCash.',
+      },
+      {
+        name: 'UXLINK',
+        tagline: 'Lớp tăng trưởng xã hội Web3',
+        description: 'Trao quyền cho người dùng và nhà phát triển để tạo ra, phát triển và nắm bắt giá trị thông qua mạng xã hội phi tập trung.',
+      },
+      {
+        name: 'XAgent',
+        tagline: 'Nền tảng tạo AI Agent',
+        description: 'Cho phép bất kỳ ai tạo AI Agent tùy chỉnh thông qua ngôn ngữ tự nhiên, kết nối mạng xã hội Web3 với thực thi AI tự động trong môi trường an toàn.',
+      },
+      {
+        name: 'Okratech Token(ORT)',
+        tagline: 'Hệ sinh thái Web3 AI',
+        description: 'Hệ sinh thái Web3 được hỗ trợ bởi AI với cơ sở hạ tầng RWA sáng tạo của BANA Protocol, tạo ra cơ hội mới cho tiện ích, tăng trưởng và ứng dụng blockchain thực tế.',
+      },
+      {
+        name: 'Arcade Galaxy',
+        tagline: 'GameFi & Web3 Entertainment',
+        description: 'Hướng tới mở rộng tương lai của GameFi, quyền sở hữu kỹ thuật số và giải trí Web3 đắm chìm.',
+      },
+      {
+        name: 'AstroX Finance',
+        tagline: 'Đối tác tăng trưởng hệ sinh thái Web3',
+        description: 'AstroX Finance và BANA Protocol sẽ thúc đẩy tăng trưởng hệ sinh thái, mở rộng tiếp cận cộng đồng và đẩy nhanh việc ứng dụng Web3.',
       },
     ],
   },

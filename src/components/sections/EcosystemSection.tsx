@@ -12,6 +12,12 @@ const PARTNER_LOGOS: Record<string, string> = {
   'Athena Protocol': '/images/athenaai.jpeg',
   WINGS: '/images/wings.jpeg',
   OMOI: '/images/omoi.jpeg',
+  IQ: '/images/iq.jpg',
+  UXLINK: '/images/unlink.jpg',
+  XAgent: '/images/xagent.jpg',
+  'Okratech Token(ORT)': '/images/ort.jpg',
+  'Arcade Galaxy': '/images/arcade_galaxy.jpg',
+  'AstroX Finance': '/images/astrox.jpg',
 };
 
 const fadeUp = {
@@ -87,13 +93,19 @@ export default function EcosystemSection() {
               {/* Logo + Name */}
               <div className="mb-4 flex items-center gap-3">
                 <div className="h-12 w-12 shrink-0 overflow-hidden rounded-full ring-2 ring-[var(--bana-border)]">
-                  <Image
-                    src={PARTNER_LOGOS[partner.name] ?? ''}
-                    alt={partner.name}
-                    width={48}
-                    height={48}
-                    className="h-full w-full object-cover"
-                  />
+                  {PARTNER_LOGOS[partner.name] ? (
+                    <Image
+                      src={PARTNER_LOGOS[partner.name]}
+                      alt={partner.name}
+                      width={48}
+                      height={48}
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center bg-[#2082ff]/10 text-[11px] font-bold text-[#2082ff]">
+                      {partner.name.charAt(0)}
+                    </div>
+                  )}
                 </div>
                 <span className="text-base font-semibold leading-tight text-[var(--bana-text-primary)]">
                   {partner.name}

@@ -5,12 +5,13 @@ import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { Globe, HeartPulse, Menu, X } from 'lucide-react';
 import { FaTelegramPlane } from 'react-icons/fa';
-import { FaWallet, FaXTwitter } from 'react-icons/fa6';
+import { FaGithub, FaWallet, FaXTwitter } from 'react-icons/fa6';
 import { useTranslation } from 'react-i18next';
 
 const SOCIAL_LINKS = [
   { href: 'https://x.com/BanaProtocol', label: 'X', icon: FaXTwitter },
   { href: 'https://t.me/BanaProtocol', label: 'Telegram', icon: FaTelegramPlane },
+  { href: 'https://github.com/bana-foundation', label: 'GitHub', icon: FaGithub },
 ] as const;
 
 const LANGUAGE_OPTIONS = [
