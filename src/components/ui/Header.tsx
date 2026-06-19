@@ -101,7 +101,7 @@ export default function Header() {
   const mutedText = scrolled ? 'text-slate-500 hover:text-slate-900' : 'text-white/72 hover:text-white';
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6 lg:px-8">
+    <header className="fixed inset-x-0 top-10 z-50 px-4 pt-4 sm:px-6 lg:px-8">
       <div className={`mx-auto flex max-w-7xl items-center justify-between rounded-[1.75rem] px-5 py-4 transition-all duration-500 lg:px-7 ${headerShell}`}>
         <button
           onClick={scrollToTop}

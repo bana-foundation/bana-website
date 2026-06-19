@@ -8,10 +8,12 @@ import SecuritySection from '@/components/sections/SecuritySection';
 import EcosystemSection from '@/components/sections/EcosystemSection';
 import Header from '@/components/ui/Header';
 import Footer from '@/components/ui/Footer';
+import AnnouncementBanner from '@/components/ui/AnnouncementBanner';
 
 export default function Home() {
   return (
     <>
+      <AnnouncementBanner />
       <Header />
       <main>
         <HeroSection />
